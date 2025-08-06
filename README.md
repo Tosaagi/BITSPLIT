@@ -10,13 +10,13 @@ Untuk menjalankan proyek ini di mesin lokal, perlu untuk menyiapkan sumber daya 
 ## Penyiapan Sumber Daya Azure
 ### a. Azure Storage Account
   1) Masuk ke Azure Portal dan buat Storage Account baru.
-  2) Buka Storage Account dan masuk ke bagian Access keys. Salin Connection string.
-  3) Buka bagian Containers dan buat container privat baru dengan nama `receipts`.
-  4) Buka bagian Tables dan buat tabel baru dengan nama `receiptresults`.
+  2) Buka Storage Account dan masuk ke bagian "Access keys". Salin Connection string.
+  3) Buka bagian "Containers" dan buat container privat baru dengan nama `receipts`.
+  4) Buka bagian "Tables" dan buat tabel baru dengan nama `receiptresults`.
 
 ### b. Azure AI Document Intelligence
   1) Pada Azure Portal, buat sumber daya baru Azure Document Intelligence.
-  2) Setelah berhasil dibuat, buka bagian Keys and Endpoint pada sumber daya tersebut. Salin Key 1 dan Endpoint URL.
+  2) Setelah berhasil dibuat, buka bagian "Keys and Endpoint" pada sumber daya tersebut. Salin Key 1 dan Endpoint URL.
 
 ## Penyiapan Backend (Azure Functions)
   1) Clone repository ini dan masuk ke direktori root projek.
