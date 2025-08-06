@@ -4,6 +4,7 @@ Bill Splitting app that utilize various resource from Microsoft Azure
 **IMPORTANT!!** If you want to run this app locally, please refer to the local development friendly repo [here](https://github.com/Tosaagi/BITSPLIT-Local.git)
 
 ## What is BITSPLIT?
+![Main Page](assets/2025-08-06_22-35.png)
 BITSPLIT is a modern web application designed to effortlessly split bills among a group of people. It eliminates the manual effort of calculating who owes what by using Artificial Intelligence to automatically read and process information from a receipt.
 
 ## Core Features
@@ -26,3 +27,7 @@ BITSPLIT is a modern web application designed to effortlessly split bills among 
     - **Azure Document Intelligence**: The core AI service used for receipt analysis.
     - **Azure Blob Storage**: Securely stores the uploaded receipt images.
     - **Azure Table Storage**: Stores the structured data extracted from the receipts.
+
+## Images
+![ItemAssignmentScreen](assets/2025-08-06_22-44.png)
+![ConfirmationSummaryModal](assets/2025-08-06_22-44_1.png)
