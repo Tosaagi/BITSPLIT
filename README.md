@@ -5,6 +5,7 @@ Bill Splitting app that utilize various resource from Microsoft Azure
 
 ## What is BITSPLIT?
 ![Main Page](assets/2025-08-06_22-35.png)
+
 BITSPLIT is a modern web application designed to effortlessly split bills among a group of people. It eliminates the manual effort of calculating who owes what by using Artificial Intelligence to automatically read and process information from a receipt.
 
 ## Core Features
