@@ -1,7 +1,7 @@
 # BITSPLIT
 Bill Splitting app that utilize various resource from Microsoft Azure
 
-**IMPORTANT!!** If you want to run this app locally, please refer to the local development friendly repo [here](https://github.com/Tosaagi/BITSPLIT-Local.git).
+**IMPORTANT!!** If you want to run this app locally, please refer to [this repo](https://github.com/Tosaagi/BITSPLIT-Local.git).
 
 You can access the live demo of the app [here](https://bitsplit-cnh9ezhxgyh9hpf2.eastus-01.azurewebsites.net/).
 
