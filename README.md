@@ -1,69 +1,28 @@
 # BITSPLIT
 Bill Splitting app that utilize various resource from Microsoft Azure
 
-Untuk menjalankan proyek ini di mesin lokal, perlu untuk menyiapkan sumber daya Azure dan kode lokalnya:
+**IMPORTANT!!** If you want to run this app locally, please refer to the local development friendly repo [here](https://github.com/Tosaagi/BITSPLIT-Local.git)
 
-- Node.js (v20 hingga terbaru)
-- Azure Functions Core Tools
-- Akun Azure
+## What is BITSPLIT?
+BITSPLIT is a modern web application designed to effortlessly split bills among a group of people. It eliminates the manual effort of calculating who owes what by using Artificial Intelligence to automatically read and process information from a receipt.
 
-## Penyiapan Sumber Daya Azure
-### a. Azure Storage Account
-  1) Masuk ke Azure Portal dan buat Storage Account baru.
-  2) Buka Storage Account dan masuk ke bagian "Access keys". Salin Connection string.
-  3) Buka bagian "Containers" dan buat container privat baru dengan nama `receipts`.
-  4) Buka bagian "Tables" dan buat tabel baru dengan nama `receiptresults`.
+## Core Features
+- **AI-Powered Receipt Scanning**: Upload a photo of a receipt, and the app's Document Intelligence will automatically extract individual items details, like their names, prices, tax, and the total amount.
+- **Simple Item Assignment**: Easily assign each item on the receipt to the person or people who ordered it. The app supports shared items and splits the cost accordingly.
+- **Real-Time Calculations**: Live summary updates as you edit to show exactly how much each person owes, including their proportional share of the tax.
+- **Clear Final Summary**: Once all items are assigned, the app presents a clean, final breakdown of the total amount owed by each person.
 
-### b. Azure AI Document Intelligence
-  1) Pada Azure Portal, buat sebuah sumber daya Document Intelligence baru.
-  2) Setelah berhasil dibuat, buka bagian "Keys and Endpoint" pada sumber daya tersebut. Salin Key 1 dan Endpoint URL.
+## How It Works (User Flow)
+1. **Upload**: The user starts by dragging and dropping or selecting an image file of their receipt.
+2. **Analyze**: The application securely uploads the image and uses a powerful AI service (Azure Document Intelligence) to analyze the content, identifying all line items, prices, and totals.
+3. **Assign**: The user is presented with a list of the extracted items. They can add the names of the people in their group and then assign each item.
+4. **Confirm**: After all items are assigned, the user can view and confirm the final, calculated breakdown of the bill.
 
-## Penyiapan Backend (Azure Functions)
-  1) Clone repository ini dan masuk ke direktori "Function-Node".
-  2) Buat file baru bernama `local.settings.json`.
-  3) Tempel konten berikut ke dalam local.settings.json, ganti nilai placeholder dengan kunci yang telah disalin dari Azure Portal:
-          
-          {
-            "IsEncrypted": false,
-            "Values": {
-              "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-              "FUNCTIONS_WORKER_RUNTIME": "node",
-              "billsplitterstorage0725_STORAGE": "YOUR_AZURE_STORAGE_CONNECTION_STRING",
-              "DOC_INTELLIGENCE_ENDPOINT": "YOUR_DOCUMENT_INTELLIGENCE_ENDPOINT",
-              "DOC_INTELLIGENCE_KEY": "YOUR_DOCUMENT_INTELLIGENCE_KEY"
-            }
-          }
+## Technical Overview
+- **Frontend (User Interface)**: Built with React, creating a responsive and interactive user experience.
+- **Backend (Server Logic)**: Powered by serverless Azure Functions, which handle file uploads and the AI analysis pipeline.
 
-  4) Instal dependensi backend:
-
-         npm install
-
-  5) Jalankan server pengembangan Azure Functions lokal:
-
-         func start
-
-API backend sekarang berjalan, biasanya pada port berikut:
-
-    http://localhost:7071
-
-## Penyiapan Frontend (React)
-  1) Masuk ke direktori WebApp.
-  2) Buka file UploadScreen.jsx. Temukan baris yang mendefinisikan URL backend dan ubah menjadi mengarah ke host fungsi lokal Anda:
-
-         // SEBELUM
-         const functionAppUrl = 'https://billsplitterfunction-node-hjb6gye8f4bsgqdy.eastus-01.azurewebsites.net';
-      
-         // SESUDAH
-         const functionAppUrl = 'http://localhost:7071';
-
-  3) Instal dependensi frontend:
-
-         npm install
-
-  4) Jalankan server pengembangan React:
-
-         npm start
-
-Browser default Anda akan membuka tab baru dengan aplikasi yang berjalan, biasanya pada port berikut:
-
-    http://localhost:5173/
+- **AI & Data Storage**:
+    - **Azure Document Intelligence**: The core AI service used for receipt analysis.
+    - **Azure Blob Storage**: Securely stores the uploaded receipt images.
+    - **Azure Table Storage**: Stores the structured data extracted from the receipts.
