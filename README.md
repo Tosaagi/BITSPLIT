@@ -66,4 +66,4 @@ API backend sekarang berjalan, biasanya pada port berikut:
 
 Browser default Anda akan membuka tab baru dengan aplikasi yang berjalan, biasanya pada port berikut:
 
-    http://localhost:3000
+    http://localhost:5173/
