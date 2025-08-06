@@ -15,7 +15,7 @@ Untuk menjalankan proyek ini di mesin lokal, perlu untuk menyiapkan sumber daya 
   4) Buka bagian "Tables" dan buat tabel baru dengan nama `receiptresults`.
 
 ### b. Azure AI Document Intelligence
-  1) Pada Azure Portal, buat sumber daya baru Azure Document Intelligence.
+  1) Pada Azure Portal, buat sebuah sumber daya Document Intelligence baru.
   2) Setelah berhasil dibuat, buka bagian "Keys and Endpoint" pada sumber daya tersebut. Salin Key 1 dan Endpoint URL.
 
 ## Penyiapan Backend (Azure Functions)
