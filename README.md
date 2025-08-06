@@ -16,15 +16,15 @@ BITSPLIT is a dynamic web application designed to split bills among a group of p
 - **Real-Time Calculations**: Live summary updates as you edit to show exactly how much each person owes, including their proportional share of the tax.
 - **Clear Final Summary**: Once all items are assigned, the app presents a clean, final breakdown of the total amount owed by each person.
 
-## How It Works (User Flow)
+## User Flow
 1. **Upload**: The user starts by dragging and dropping or selecting an image file of their receipt.
-2. **Analyze**: The application securely uploads the image and uses a powerful AI service (Azure Document Intelligence) to analyze the content, identifying all line items, prices, and totals.
+2. **Analyze**: The application securely uploads the image and uses an AI service (Azure Document Intelligence) to analyze the content, identifying all line items, prices, and totals.
 3. **Assign**: The user is presented with a list of the extracted items. They can add the names of the people in their group and then assign each item.
 4. **Confirm**: After all items are assigned, the user can view and confirm the final, calculated breakdown of the bill.
 
 ## Technical Overview
 - **Frontend (User Interface)**: Built with React, creating a responsive and interactive user experience.
-- **Backend (Server Logic)**: Powered by serverless Azure Functions, which handle file uploads and the AI analysis pipeline.
+- **Backend (Server Logic)**: Powered by serverless Azure Functions, which handle file uploads and the AI analysis.
 
 - **AI & Data Storage**:
     - **Azure Document Intelligence**: The core AI service used for receipt analysis.
