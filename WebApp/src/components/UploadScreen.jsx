@@ -1,3 +1,4 @@
+import React from 'react';
 import { FiUpload, FiLoader, FiCheckCircle } from 'react-icons/fi';
 import { clsx } from 'clsx';
 

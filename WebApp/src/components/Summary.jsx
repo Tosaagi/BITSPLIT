@@ -1,13 +1,7 @@
-// src/components/Summary.jsx
-
-import React from 'react';
 import { FiPaperclip, FiCheckCircle } from 'react-icons/fi';
 import StyledButton from './StyledButton';
 import { formatCurrency } from '../utils/formatCurrency';
 
-/**
- * Displays the final summary of totals.
- */
 const Summary = ({ totals, receiptDetails, people, onConfirm }) => {
     return (
         <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-8">
